@@ -1,0 +1,163 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Geist:wght@400;500;600;700&display=swap");
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@theme {
+  --font-sans: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --font-display: "Geist", "Inter", sans-serif;
+  --font-serif: Georgia, "Times New Roman", serif;
+
+  --color-bg: var(--bg);
+  --color-surface: var(--surface);
+  --color-surface-2: var(--surface-2);
+  --color-border: var(--border);
+  --color-ink: var(--ink);
+  --color-ink-muted: var(--ink-muted);
+  --color-accent: var(--accent);
+  --color-accent-strong: var(--accent-strong);
+  --color-accent-soft: var(--accent-soft);
+  --color-success: var(--success);
+  --color-warning: var(--warning);
+  --color-danger: var(--danger);
+
+  --radius-card: 16px;
+  --radius-pill: 999px;
+}
+
+:root,
+[data-theme="light"] {
+  --bg: #f6f8fb;
+  --surface: #ffffff;
+  --surface-2: #eef2f7;
+  --border: rgba(70, 18, 19, 0.08);
+  --ink: #172033;
+  --ink-muted: #667085;
+  --accent: #2563eb;
+  --accent-strong: #1d4ed8;
+  --accent-soft: #eaf1ff;
+  --accent-hero: #0f172a;
+  --accent-hero-2: #2563eb;
+  --success: #059669;
+  --warning: #d97706;
+  --danger: #2563eb;
+  --shadow-card: 0 1px 3px rgba(70, 18, 19, 0.05),
+    0 1px 2px rgba(70, 18, 19, 0.04);
+  --shadow-hover: 0 8px 24px rgba(70, 18, 19, 0.08);
+}
+
+[data-theme="dark"] {
+  --bg: #0b1120;
+  --surface: #111827;
+  --surface-2: #1f2937;
+  --border: rgba(255, 255, 255, 0.07);
+  --ink: #f8fafc;
+  --ink-muted: #94a3b8;
+  --accent: #3b82f6;
+  --accent-strong: #93c5fd;
+  --accent-soft: rgba(205, 47, 61, 0.14);
+  --accent-hero: #111827;
+  --accent-hero-2: #1d4ed8;
+  --success: #3b82f6;
+  --warning: #fbbf24;
+  --danger: #3b82f6;
+  --shadow-card: 0 1px 3px rgba(0, 0, 0, 0.35), 0 1px 2px rgba(0, 0, 0, 0.25);
+  --shadow-hover: 0 8px 24px rgba(0, 0, 0, 0.4);
+}
+
+html,
+body,
+#root {
+  height: 100%;
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: var(--bg);
+  color: var(--ink);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-feature-settings: "cv11", "ss01";
+}
+
+button,
+input,
+select,
+textarea {
+  font: inherit;
+}
+
+* {
+  border-color: var(--border);
+}
+
+.shadow-card {
+  box-shadow: var(--shadow-card);
+}
+.shadow-hover {
+  box-shadow: var(--shadow-hover);
+}
+
+.font-display {
+  font-family: var(--font-display);
+  letter-spacing: -0.02em;
+}
+
+.font-serif {
+  font-family: var(--font-serif);
+}
+
+.tabular {
+  font-variant-numeric: tabular-nums;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(0, 0, 0, 0.08);
+  border-radius: 8px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(0, 0, 0, 0.14);
+}
+[data-theme="dark"] ::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.08);
+}
+[data-theme="dark"] ::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.14);
+}
+
+/* 2026 professional workspace refresh */
+:root,
+[data-theme="light"] {
+  --shadow-card: 0 1px 2px rgba(15, 23, 42, .04), 0 1px 3px rgba(15, 23, 42, .03);
+  --shadow-hover: 0 12px 30px rgba(15, 23, 42, .08);
+}
+
+body {
+  background-image: linear-gradient(180deg, rgba(255,255,255,.55), rgba(246,248,251,0) 260px);
+}
+
+::selection { background: var(--accent-soft); color: var(--accent-strong); }
+
+button, a, input, select, textarea { -webkit-tap-highlight-color: transparent; }
+
+input, select, textarea { accent-color: var(--accent); }
+
+table { border-collapse: separate; border-spacing: 0; }
+
+thead th {
+  color: var(--ink-muted);
+  font-size: 11px;
+  font-weight: 650;
+  letter-spacing: .06em;
+  text-transform: uppercase;
+}
+
+tbody tr { transition: background-color .16s ease; }
+tbody tr:hover { background: color-mix(in srgb, var(--surface-2) 62%, transparent); }
+
+[data-theme="dark"] body {
+  background-image: radial-gradient(circle at 50% -10%, rgba(59,130,246,.09), transparent 34%);
+}
