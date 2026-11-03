@@ -3,11 +3,17 @@
 
 A modern, full-stack invoicing platform designed to simplify billing, client management, payment tracking, and financial workflows using AI-powered features.
 
+### 🌐 [Live Demo](https://ai-invoice-billing-app.vercel.app/)
+
 ## 🚀 Overview
 
 Invoicer helps businesses and freelancers manage their invoicing process from a centralized dashboard.
 
 The platform combines traditional invoice management with AI-assisted tools to streamline repetitive tasks and provide useful financial insights.
+
+## 📸 Application Screenshots
+<img width="1893" height="908" alt="Screenshot (1556)" src="https://github.com/user-attachments/assets/6d4b979c-fd4c-40d3-a476-b02018d1df80" />
+<img width="1890" height="913" alt="Screenshot (1536)" src="https://github.com/user-attachments/assets/cb1aa266-4554-45be-bc20-5d2b36f247f5" />
 
 ## ✨ Features
 
